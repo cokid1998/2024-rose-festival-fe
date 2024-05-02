@@ -127,3 +127,73 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+@font-face {
+  font-family: "PyeongChangPeace";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../public/fonts/PyeongChangPeace-Bold.otf");
+}
+@font-face {
+  font-family: "PyeongChangPeace";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../../public/fonts/PyeongChangPeace-Light.otf");
+}
+@font-face {
+  font-family: "NanumSquareRound";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../../public/fonts/NanumSquareRoundOTFEB.otf");
+}
+@font-face {
+  font-family: "NanumSquareRound";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../public/fonts/NanumSquareRoundOTFB.otf");
+}
+@font-face {
+  font-family: "NanumSquareRound";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../public/fonts/NanumSquareRoundOTFR.otf");
+}
+@font-face {
+  font-family: "NanumSquareRound";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../../public/fonts/NanumSquareRoundOTFL.otf");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../../public/fonts/NanumSquareEB.otf");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../public/fonts/NanumSquareB.otf");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../public/fonts/NanumSquareR.otf");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../../public/fonts/NanumSquareL.otf");
+}
+
+body {
+  font-family: "NanumSquare";
+}
+
+/*
+  Nextjs에 폰트를 적용하는 법
+  https://velog.io/@minju1009/Nextjs에-폰트-적용하려면
+*/
