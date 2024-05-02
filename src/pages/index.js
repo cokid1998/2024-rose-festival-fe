@@ -1,10 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useRouter } from "next/router";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { t } = useTranslation();
+  const router = useRouter();
+  const handleChange = (locale) => {
+    router.push(router.pathname, router.asPath, { locale });
+  };
   return (
     <>
       <Head>
@@ -13,7 +20,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      index
+      <h1>{t("hello")}</h1>
+      <button onClick={() => handleChange("ko")}>Change ko</button>
+      <button onClick={() => handleChange("en")}>Change en</button>
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const { locale } = context;
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  };
 }
