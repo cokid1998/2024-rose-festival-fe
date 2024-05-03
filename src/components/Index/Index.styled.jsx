@@ -7,7 +7,7 @@ export const IndexWrapper = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
+  z-index: 1;
   background-image: url("images/index/index-background.png");
   background-position: center;
   background-size: cover;
