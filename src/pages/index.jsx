@@ -14,6 +14,7 @@ import {
   Map,
 } from "@src/components/Index/Index.styled";
 import BackgroundImageUrl from "@public/images/index/index-background.png";
+import { getRandomName } from "@src/utils/getRandomName";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -21,6 +22,7 @@ export default function Home() {
   const handleChange = (locale) => {
     router.push(router.pathname, router.asPath, { locale });
   };
+
   return (
     <>
       <Head>
