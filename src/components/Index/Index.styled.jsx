@@ -47,7 +47,7 @@ export const MapWrapper = styled("div")`
   align-items: center;
   gap: 28px;
   position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   left: 50%;
   translate: -50%;
 `;
@@ -56,6 +56,9 @@ export const MapTitle = styled("h2")`
   font-weight: 300;
   font-size: 22px;
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 export const Map = styled("div")`
   width: 343px;

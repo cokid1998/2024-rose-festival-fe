@@ -14,7 +14,8 @@ import {
   Map,
 } from "@src/components/Index/Index.styled";
 import BackgroundImageUrl from "@public/images/index/index-background.png";
-import { getRandomName } from "@src/utils/getRandomName";
+import Star from "@public/svg/Star.svg";
+import Image from "next/image";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -48,7 +49,11 @@ export default function Home() {
           </PeriodWrapper>
         </TypoWrapper>
         <MapWrapper>
-          <MapTitle>장미정원 조감도</MapTitle>
+          <MapTitle>
+            <Image src={Star} alt="star-icon" />
+            장미정원 조감도
+            <Image src={Star} alt="star-icon" />
+          </MapTitle>
           <Map />
         </MapWrapper>
       </BackgroundImageWrapper>
