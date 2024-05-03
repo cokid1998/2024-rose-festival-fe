@@ -6,6 +6,9 @@ export const HeaderWrapper = styled("header")`
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
 `;
 
 export const IconMenuWrapper = styled("div")`
