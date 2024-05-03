@@ -4,7 +4,7 @@ export const HeaderWrapper = styled("header")`
   width: 100%;
   height: 70px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   position: fixed;
   z-index: 2;
@@ -12,7 +12,8 @@ export const HeaderWrapper = styled("header")`
 `;
 
 export const IconMenuWrapper = styled("div")`
-  width: 310px;
+  width: 100%;
+  padding: 0 32px;
   height: 24px;
   display: flex;
   align-items: center;

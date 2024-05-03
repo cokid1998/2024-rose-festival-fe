@@ -1,10 +1,19 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useRouter } from "next/router";
-import { IndexWrapper } from "@src/components/Index/Index.styled";
-import BackImage from "@public/images/index/index-background.png";
+import {
+  TitleWrapper,
+  BackgroundImageWrapper,
+  ImageSize,
+  TypoWrapper,
+  PeriodWrapper,
+  Period,
+  MapWrapper,
+  MapTitle,
+  Map,
+} from "@src/components/Index/Index.styled";
+import BackgroundImageUrl from "@public/images/index/index-background.png";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -20,11 +29,27 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <IndexWrapper>
-        <h1>{t("hello")}</h1>
-        <button onClick={() => handleChange("ko")}>Change ko</button>
-        <button onClick={() => handleChange("en")}>Change en</button>
-      </IndexWrapper>
+
+      <BackgroundImageWrapper>
+        <ImageSize
+          src={BackgroundImageUrl}
+          alt="index-background"
+          width={375}
+          height={1262}
+        />
+        <TypoWrapper>
+          <TitleWrapper>조선대 장미축제</TitleWrapper>
+          <PeriodWrapper>
+            <Period>2024. 05. 17(금)</Period>
+            <Period>⸺</Period>
+            <Period>2024. 05. 19(일)</Period>
+          </PeriodWrapper>
+        </TypoWrapper>
+        <MapWrapper>
+          <MapTitle>장미정원 조감도</MapTitle>
+          <Map />
+        </MapWrapper>
+      </BackgroundImageWrapper>
     </>
   );
 }
