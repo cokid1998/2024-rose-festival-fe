@@ -1,10 +1,11 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-export const SideMenuWrapper = styled("nav")`
+export const SideMenuWrapper = styled(motion.nav)`
   width: 100lvw;
   height: 100%;
   position: fixed;
   top: 0;
   z-index: 9999;
-  background-color: red;
+  backdrop-filter: blur(25px);
 `;
