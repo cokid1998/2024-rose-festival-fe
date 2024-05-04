@@ -19,3 +19,9 @@ export const IconMenuWrapper = styled("div")`
   align-items: center;
   justify-content: space-between;
 `;
+
+export const HeaderLogo = styled("h1")`
+  font-family: "PyeongChangPeace";
+  color: white;
+  font-size: 20px;
+`;

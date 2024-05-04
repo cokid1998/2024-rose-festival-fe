@@ -132,7 +132,7 @@ export const TodayRoseTabTypo = styled("div")`
   font-size: 23px;
   padding: 13px 30px;
   border-bottom: ${({ curTab }) => (!curTab ? "1px solid white" : "")};
-  z-index: 9999;
+  z-index: 2;
 `;
 
 /* NoticeTab */
@@ -146,7 +146,7 @@ export const NoticeTabTypo = styled("div")`
   font-size: 23px;
   padding: 13px 30px;
   border-bottom: ${({ curTab }) => (curTab ? "1px solid white" : "")};
-  z-index: 9999;
+  z-index: 2;
 `;
 export const NoticeTitle = styled("div")`
   width: 100%;
