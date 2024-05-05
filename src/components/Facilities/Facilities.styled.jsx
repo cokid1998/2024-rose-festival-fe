@@ -25,7 +25,7 @@ export const ContenetPositionWrapper = styled("div")`
 export const FacilitiesWrapper = styled("div")`
   width: 100%;
   position: relative;
-  bottom: 60px;
+  bottom: 70px;
   display: flex;
   flex-direction: column;
   text-align: center;
