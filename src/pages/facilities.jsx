@@ -6,9 +6,9 @@ import {
   ContenetPositionWrapper,
   FacilitiesWrapper,
   FacilitiesGuideTypoWrapper,
-  Map,
   FacilitiesChoiceBox,
 } from "@src/components/Facilities/Facilities.styled";
+import Map from "@src/components/Facilities/Map";
 import FacilitiesContent from "@src/components/Facilities/FacilitiesContent";
 import Star from "@public/svg/Star.svg";
 import ParkingOn from "@public/svg/facilities/OnIcon/ParkingOn.svg";
@@ -89,9 +89,7 @@ const Facilities = () => {
             편의시설 안내
             <Image src={Star} alt="star-icon" />
           </FacilitiesGuideTypoWrapper>
-
-          <Map />
-
+          <Map curCategory={curCategory} />
           <FacilitiesChoiceBox>
             {facilitiesInfo.map((item) => {
               return (

@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import { motion } from "framer-motion";
 
 export const Container = styled("div")`
   height: 975px;
@@ -14,7 +15,6 @@ export const FacilitiesBackgroundImageWrapper = styled("div")`
   height: 865px;
   bottom: 0;
 `;
-
 export const ContenetPositionWrapper = styled("div")`
   height: auto;
   position: absolute;
@@ -39,11 +39,15 @@ export const FacilitiesGuideTypoWrapper = styled("div")`
   padding-bottom: 17px;
   margin-bottom: 32px;
 `;
-export const Map = styled("div")`
+export const MapWrapper = styled("div")`
   width: 337px;
   height: 312px;
   background-color: #d9d9d9;
   margin-bottom: 54px;
+  position: relative;
+`;
+export const PinWrapper = styled(motion.div)`
+  position: absolute;
 `;
 export const FacilitiesChoiceBox = styled("div")`
   display: grid;
