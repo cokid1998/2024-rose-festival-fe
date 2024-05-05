@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 export default function Document() {
   return (
-    <Html lang="ko">
+    <Html lang="ko" style={{ height: "100%" }}>
       <Head />
       <Body>
         <Main />

@@ -34,12 +34,7 @@ export default function Home() {
       </Head>
 
       <BackgroundImageWrapper>
-        <ImageSize
-          src={BackgroundImageUrl}
-          alt="index-background"
-          width={375}
-          height={1262}
-        />
+        <ImageSize src={BackgroundImageUrl} alt="index-background" />
         <TypoWrapper>
           <TitleWrapper>조선대 장미축제</TitleWrapper>
           <PeriodWrapper>
