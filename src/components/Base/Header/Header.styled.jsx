@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const HeaderWrapper = styled("header")`
   width: 100%;
+  max-width: 768px;
   height: 70px;
   display: flex;
   align-items: center;
