@@ -63,8 +63,8 @@ const Map = ({ curCategory }) => {
         {curCategory && (
           <PinWrapper
             initial={{
-              x: 0,
-              y: 0,
+              x: 150,
+              y: 150,
               opacity: 0,
             }}
             animate={{
