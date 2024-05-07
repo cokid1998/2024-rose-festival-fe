@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useRouter } from "next/router";
 import {
   TitleWrapper,
   BackgroundImageWrapper,
@@ -19,10 +18,6 @@ import Image from "next/image";
 
 export default function Home() {
   const { t } = useTranslation();
-  const router = useRouter();
-  const handleChange = (locale) => {
-    router.push(router.pathname, router.asPath, { locale });
-  };
 
   return (
     <>
@@ -36,17 +31,17 @@ export default function Home() {
       <BackgroundImageWrapper>
         <ImageSize src={BackgroundImageUrl} alt="index-background" />
         <TypoWrapper>
-          <TitleWrapper>조선대 장미축제</TitleWrapper>
+          <TitleWrapper>{t("Title")}</TitleWrapper>
           <PeriodWrapper>
-            <Period>2024. 05. 17(금)</Period>
+            <Period>{t("Date1")}</Period>
             <Period>⸺</Period>
-            <Period>2024. 05. 19(일)</Period>
+            <Period style={{ width: "200px" }}>{t("Date2")}</Period>
           </PeriodWrapper>
         </TypoWrapper>
         <MapWrapper>
           <MapTitle>
             <Image src={Star} alt="star-icon" />
-            장미정원 조감도
+            {t("RoseGardenMap")}
             <Image src={Star} alt="star-icon" />
           </MapTitle>
           <Map />

@@ -7,6 +7,7 @@ import NoticeBackgroundImageUrl from "@public/images/notice/Notice-background-im
 import Image from "next/image";
 import NoticeTab from "@src/components/Notice/NoticeTab";
 import { useState } from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Notice = () => {
   const [curTab, setCurTab] = useState(0);
@@ -21,5 +22,14 @@ const Notice = () => {
     </NoticeWrapper>
   );
 };
+
+export async function getStaticProps(context) {
+  const { locale } = context;
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  };
+}
 
 export default Notice;

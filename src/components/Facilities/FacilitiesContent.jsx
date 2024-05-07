@@ -3,9 +3,10 @@ import {
   IconTypoWrapper,
 } from "@src/components/Facilities/Facilities.styled";
 import Image from "next/image";
-import { useState } from "react";
+import { useTranslation } from "next-i18next";
 
 const FacilitiesContent = ({ item, curCategory, setCurCategory }) => {
+  const { t } = useTranslation();
   const handleCategory = () => {
     if (item.title === curCategory) {
       setCurCategory("");
@@ -24,7 +25,7 @@ const FacilitiesContent = ({ item, curCategory, setCurCategory }) => {
           src={item.title === curCategory ? item.onIcon : item.offIcon}
           alt={`${item.title}-icon`}
         />
-        {item.title}
+        {t(item.title)}
       </IconTypoWrapper>
     </FacilitiesContentWrapper>
   );

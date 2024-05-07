@@ -13,11 +13,12 @@ import NoticeTabBackgroundImageUrl from "@public/images/notice/NoticeTabBackgrou
 import NoticeTitleBackgroundImageUrl from "@public/images/notice/NoticeTitleBackground.png";
 import NoticeTitleRoseIcon from "@public/images/notice/RoseIcon/NoticeRose.png";
 import WarningContent from "@src/components/Notice/WarningContent";
+import { useTranslation } from "next-i18next";
 
 const NoticeTab = ({ curTab, setCurTab }) => {
+  const { t } = useTranslation();
   const handleTab = () => {
     setCurTab(1);
-    console.log(curTab);
   };
 
   return (
@@ -29,7 +30,7 @@ const NoticeTab = ({ curTab, setCurTab }) => {
         style={{ zIndex: 0 }}
       />
       <NoticeTabTypo curTab={curTab} onClick={handleTab}>
-        관람안내
+        {t("TourGuide")}
       </NoticeTabTypo>
 
       <BaseContentWrapper>
@@ -47,7 +48,7 @@ const NoticeTab = ({ curTab, setCurTab }) => {
               src={NoticeTitleBackgroundImageUrl}
               alt="NoticeBackground"
             />
-            <NoticeTitle>관람객 유의사항</NoticeTitle>
+            <NoticeTitle>{t("NotesForVisitors")}</NoticeTitle>
             <Desc
               style={{
                 width: "100%",
@@ -57,7 +58,7 @@ const NoticeTab = ({ curTab, setCurTab }) => {
                 marginTop: "16px",
               }}
             >
-              관람 시 유의사항을 안내해 드릴게요
+              {t("NotesForVisitorsDesc")}
             </Desc>
           </RoseIconWrapper>
         </TitleWrapper>

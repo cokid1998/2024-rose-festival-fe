@@ -8,6 +8,7 @@ import {
   FacilitiesGuideTypoWrapper,
   FacilitiesChoiceBox,
 } from "@src/components/Facilities/Facilities.styled";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Map from "@src/components/Facilities/Map";
 import FacilitiesContent from "@src/components/Facilities/FacilitiesContent";
 import Star from "@public/svg/Star.svg";
@@ -24,57 +25,58 @@ import CafeOff from "@public/svg/facilities/OffIcon/CafeOff.svg";
 import CameraOff from "@public/svg/facilities/OffIcon/CameraOff.svg";
 import RoseOff from "@public/svg/facilities/OffIcon/RoseOff.svg";
 import { useState } from "react";
-
-const facilitiesInfo = [
-  {
-    title: "주차장",
-    onIcon: ParkingOn,
-    offIcon: ParkingOff,
-  },
-  {
-    title: "화장실",
-    onIcon: ToiletOn,
-    offIcon: ToiletOff,
-  },
-  {
-    title: "편의점",
-    onIcon: StoreOn,
-    offIcon: StoreOff,
-  },
-  {
-    title: "카페1",
-    onIcon: CafeOn,
-    offIcon: CafeOff,
-  },
-  {
-    title: "카페2",
-    onIcon: CafeOn,
-    offIcon: CafeOff,
-  },
-  {
-    title: "포토존",
-    onIcon: CameraOn,
-    offIcon: CameraOff,
-  },
-  {
-    title: "장미1",
-    onIcon: RoseOn,
-    offIcon: RoseOff,
-  },
-  {
-    title: "장미2",
-    onIcon: RoseOn,
-    offIcon: RoseOff,
-  },
-  {
-    title: "장미3",
-    onIcon: RoseOn,
-    offIcon: RoseOff,
-  },
-];
+import { useTranslation } from "next-i18next";
 
 const Facilities = () => {
+  const { t } = useTranslation();
   const [curCategory, setCurCategory] = useState("");
+  const facilitiesInfo = [
+    {
+      title: "Parking",
+      onIcon: ParkingOn,
+      offIcon: ParkingOff,
+    },
+    {
+      title: "Toilet",
+      onIcon: ToiletOn,
+      offIcon: ToiletOff,
+    },
+    {
+      title: "Convenience",
+      onIcon: StoreOn,
+      offIcon: StoreOff,
+    },
+    {
+      title: "Cafe1",
+      onIcon: CafeOn,
+      offIcon: CafeOff,
+    },
+    {
+      title: "Cafe2",
+      onIcon: CafeOn,
+      offIcon: CafeOff,
+    },
+    {
+      title: "PhotoZone",
+      onIcon: CameraOn,
+      offIcon: CameraOff,
+    },
+    {
+      title: "Rose1",
+      onIcon: RoseOn,
+      offIcon: RoseOff,
+    },
+    {
+      title: "Rose2",
+      onIcon: RoseOn,
+      offIcon: RoseOff,
+    },
+    {
+      title: "Rose3",
+      onIcon: RoseOn,
+      offIcon: RoseOff,
+    },
+  ];
 
   return (
     <Container>
@@ -86,7 +88,7 @@ const Facilities = () => {
         <FacilitiesWrapper>
           <FacilitiesGuideTypoWrapper>
             <Image src={Star} alt="star-icon" />
-            편의시설 안내
+            {t("FacilitiesInfoTitle")}
             <Image src={Star} alt="star-icon" />
           </FacilitiesGuideTypoWrapper>
           <Map curCategory={curCategory} />
@@ -107,5 +109,14 @@ const Facilities = () => {
     </Container>
   );
 };
+
+export async function getStaticProps(context) {
+  const { locale } = context;
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  };
+}
 
 export default Facilities;

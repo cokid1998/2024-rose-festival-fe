@@ -182,6 +182,7 @@ export const ImageTypeWrapper = styled("div")`
   }}
 `;
 export const WarningTypo = styled("p")`
+  width: 150px;
   font-family: "Pretendard";
   font-size: 17px;
   color: white;

@@ -13,11 +13,12 @@ import Image from "next/image";
 import TodayRoseTabBackgroundImageUrl from "@public/images/notice/TodayRoseTabBackground.png";
 import TodayRoseTitleRoseImageUrl from "@public/images/notice/RoseIcon/TodayRoseTitleRose.png";
 import Star from "@public/svg/Star.svg";
+import { useTranslation } from "next-i18next";
 
 const TodayRoseTab = ({ curTab, setCurTab }) => {
+  const { t } = useTranslation();
   const handleTab = () => {
     setCurTab(0);
-    console.log(curTab);
   };
 
   return (
@@ -29,7 +30,7 @@ const TodayRoseTab = ({ curTab, setCurTab }) => {
         style={{ zIndex: 0 }}
       />
       <TodayRoseTabTypo curTab={curTab} onClick={handleTab}>
-        오늘의 장미
+        {t("TodayRose")}
       </TodayRoseTabTypo>
 
       <BaseContentWrapper>
@@ -42,10 +43,10 @@ const TodayRoseTab = ({ curTab, setCurTab }) => {
           </RoseIconWrapper>
           <TodayRoseTitle>
             <Image src={Star} alt="star-icon" />
-            오늘의 장미
+            {t("TodayRose")}
             <Image src={Star} alt="star-icon" />
           </TodayRoseTitle>
-          <Desc>오늘의 개화 상황을 알려드릴게요</Desc>
+          <Desc>{t("TodayRoseDesc")}</Desc>
         </TitleWrapper>
 
         <IntroRoseContent />

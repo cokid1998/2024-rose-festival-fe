@@ -25,4 +25,9 @@ export const HeaderLogo = styled("h1")`
   font-family: "PyeongChangPeace";
   color: white;
   font-size: 20px;
+  text-align: center;
+`;
+
+export const ChangeLanguageContainer = styled("div")`
+  position: relative;
 `;

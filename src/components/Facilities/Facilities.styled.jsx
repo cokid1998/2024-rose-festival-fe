@@ -34,6 +34,9 @@ export const FacilitiesGuideTypoWrapper = styled("div")`
   font-family: "PyeongChangPeace";
   font-size: 30px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   border-bottom: 1px solid white;
   padding-bottom: 17px;
