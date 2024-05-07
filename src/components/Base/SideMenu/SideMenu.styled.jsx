@@ -9,3 +9,9 @@ export const SideMenuWrapper = styled(motion.nav)`
   z-index: 9999;
   backdrop-filter: blur(25px);
 `;
+
+
+export const HeaderSide = styled("div")`
+align-items: center;
+justify-content: space-between;
+`;

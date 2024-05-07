@@ -1,4 +1,4 @@
-import { SideMenuWrapper } from "@src/components/Base/SideMenu/SideMenu.styled";
+import { SideMenuWrapper, HeaderSide, First, Second } from "@src/components/Base/SideMenu/SideMenu.styled";
 import { useEffect } from "react";
 import Close from "@public/svg/Close.svg";
 import Image from "next/image";
@@ -6,6 +6,13 @@ import { AnimatePresence } from "framer-motion";
 import Language from "@public/svg/Language.svg";
 import { HeaderWrapper, IconMenuWrapper, HeaderLogo } from "../Header/Header.styled";
 import Link from "next/link";
+import Main from "@public/svg/Main.svg";
+import Booth from "@public/svg/Booth.svg";
+import Convenient from "@public/svg/Convenient.svg";
+import Map from "@public/svg/Map.svg";
+import Register from "@public/svg/Register.svg";
+import Sound from "@public/svg/Sound.svg";
+import Heart from "@public/svg/Heart.svg";
 
 const SideMenu = ({ isMenuOpen, setIsMenuOpen }) => {
   const handleMenuOpen = () => {
@@ -56,31 +63,52 @@ const SideMenu = ({ isMenuOpen, setIsMenuOpen }) => {
             flexDirection: 'column',
             alignItems: 'center'
           }}>
+        
+        <HeaderSide>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Image src={Main} alt="Main-icon" style={{ marginBottom: "40px", marginRight: "10px" }} />
+            <Link href={"/"}>
+                <div style={{marginBottom: "40px"}}>메인화면</div>
+            </Link>
+        </div>
 
-        <Link href={"/"}>
-        <div style={{marginBottom: "20px"}}>메인화면</div>
-        </Link>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Image src={Sound} alt="Sound-icon" style={{ marginBottom: "40px", marginRight: "10px" }} />
+            <Link href={"/notice"}>
+                <div style={{marginBottom: "40px"}}>공지사항</div>
+            </Link>
+        </div>
 
+        <div style={{ display: "flex", alignItems: "center" }}>
+        <Image src={Map} alt="Map-icon" style={{ marginBottom: "40px", marginRight: "10px" }} />
         <Link href={"/notice"}>
-        <div style={{marginBottom: "20px"}}>공지사항</div>
+        <div style={{marginBottom: "40px"}}>오시는 길</div>
         </Link>
+        </div>
 
-        <Link href={"/notice"}>
-        <div style={{marginBottom: "20px"}}>오시는 길</div>
-        </Link>
-
+        <div style={{ display: "flex", alignItems: "center" }}>
+        <Image src={Convenient} alt="Convenient-icon" style={{ marginBottom: "40px", marginRight: "10px" }} />
         <Link href={"/facilities"}>
-        <div style={{marginBottom: "20px"}}>편의시설 안내</div>
+        <div style={{marginBottom: "40px"}}>편의시설 안내</div>
         </Link>
+        </div>
 
+        <div style={{ display: "flex", alignItems: "center" }}>
+        <Image src={Register} alt="Register-icon" style={{ marginBottom: "40px", marginRight: "10px" }} />
         <Link href={"/"}>
-        <div style={{marginBottom: "20px"}}>방명록</div>
+        <div style={{marginBottom: "40px"}}>방명록</div>
         </Link>
+        </div>
 
+        <div style={{ display: "flex", alignItems: "center" }}>
+        <Image src={Heart} alt="Heart-icon" style={{ marginBottom: "40px", marginRight: "10px" }} />
         <Link href={"/"}>
-        <div style={{marginBottom: "20px"}}>만든이들</div>
+        <div style={{marginBottom: "40px"}}>만든이들</div>
         </Link>
-          </header>
+        </div>
+
+        </HeaderSide>
+        </header>
             
             
           </SideMenuWrapper>
