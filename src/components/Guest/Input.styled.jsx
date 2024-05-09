@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-export const InputContiainer = styled("div")`
+export const InputContiainer = styled(motion.div)`
   width: 100vw;
   height: 470px;
   border-radius: 25px;
   background-color: white;
   position: absolute;
-  bottom: 0;
+  bottom: -320px;
   overflow: hidden;
   position: fixed;
 `;
