@@ -1,3 +1,11 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
-import { css } from "@emotion/react";
+
+export const MakersContainer = styled("div")`
+  position: relative;
+  display: flex;
+  justify-content: center;
+`;
+export const MakersWrapper = styled("div")`
+  position: absolute;
+  top: 200px;
+`;

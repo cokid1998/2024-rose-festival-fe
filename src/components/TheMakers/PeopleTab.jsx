@@ -13,21 +13,15 @@ import MakersBackgroundImageUrl from "@public/images/makers/TheMakers-background
 import NoticeTitleBackgroundImageUrl from "@public/images/notice/NoticeTitleBackground.png";
 import People from "@src/components/TheMakers/People";
 
-const PeopleTab = ({ curTab, setCurTab }) => {
-  const handleTab = () => {
-    setCurTab(1);
-    console.log(curTab);
-  };
-
+const PeopleTab = () => {
   return (
-    <NoticeTabWrapper curTab={curTab}>
+    <NoticeTabWrapper>
       <Image
         src={MakersBackgroundImageUrl}
         alt="PeopleTab"
         fill
         style={{ zIndex: 0 }}
       />
-
 
       <BaseContentWrapper>
         <TitleWrapper>
@@ -51,7 +45,7 @@ const PeopleTab = ({ curTab, setCurTab }) => {
           </RoseIconWrapper>
         </TitleWrapper>
 
-        <People/>
+        <People />
       </BaseContentWrapper>
     </NoticeTabWrapper>
   );
