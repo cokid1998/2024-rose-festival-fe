@@ -10,8 +10,16 @@ export const SideMenuWrapper = styled(motion.nav)`
   backdrop-filter: blur(25px);
 `;
 
-
 export const HeaderSide = styled("div")`
-align-items: center;
-justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+export const MenuTypo = styled("div")`
+  font-family: "NanumSquareRound";
+  color: #1e1e1e;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 20px;
 `;

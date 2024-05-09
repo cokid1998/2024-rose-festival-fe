@@ -12,12 +12,11 @@ import Image from "next/image";
 import Link from "next/link";
 import ChangeLanguage from "@src/components/Base/Header/ChangeLanguage";
 
-const Header = ({ setIsMenuOpen }) => {
+const Header = ({ language, setLanguage, setIsMenuOpen }) => {
   const { t } = useTranslation();
   const handleMenuOpen = () => {
     setIsMenuOpen((prev) => !prev);
   };
-  const [language, setLanguage] = useState(false);
   const handleToggle = () => {
     setLanguage((prev) => !prev);
   };
