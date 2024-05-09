@@ -13,6 +13,7 @@ import {
 import Map from "@src/components/Facilities/Map";
 import FacilitiesContent from "@src/components/Facilities/FacilitiesContent";
 import Star from "@public/svg/Star.svg";
+import PeopleTab from "@src/components/TheMakers/PeopleTab";
 
 const TheMakers = () => {
   const [curTab, setCurTab] = useState(0);
@@ -27,9 +28,7 @@ const TheMakers = () => {
       <ContenetPositionWrapper>
         <FacilitiesWrapper>
           <FacilitiesGuideTypoWrapper>
-            <Image src={Star} alt="star-icon" />
-            만든이들
-            <Image src={Star} alt="star-icon" />
+            <PeopleTab curTab={curTab} setCurTab={setCurTab} />
           </FacilitiesGuideTypoWrapper>
         </FacilitiesWrapper>
       </ContenetPositionWrapper>

@@ -102,7 +102,7 @@ const SideMenu = ({ isMenuOpen, setIsMenuOpen }) => {
 
         <div style={{ display: "flex", alignItems: "center" }}>
         <Image src={Heart} alt="Heart-icon" style={{ marginBottom: "40px", marginRight: "10px" }} />
-        <Link href={"/"}>
+        <Link href={"/makers"}>
         <div style={{marginBottom: "40px"}}>만든이들</div>
         </Link>
         </div>
