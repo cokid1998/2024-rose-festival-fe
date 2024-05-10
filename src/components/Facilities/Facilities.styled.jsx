@@ -43,11 +43,13 @@ export const FacilitiesGuideTypoWrapper = styled("div")`
   margin-bottom: 32px;
 `;
 export const MapWrapper = styled("div")`
-  width: 337px;
+  width: 360px;
   height: 312px;
   background-color: #d9d9d9;
   margin-bottom: 54px;
   position: relative;
+  border-radius: 15px;
+  overflow: hidden;
 `;
 export const PinWrapper = styled(motion.div)`
   position: absolute;

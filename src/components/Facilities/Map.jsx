@@ -5,51 +5,51 @@ import {
 import Image from "next/image";
 import PinIcon from "@public/images/facilities/Pin.png";
 import { AnimatePresence } from "framer-motion";
-
+import MapImage from "@public/images/facilities/Map.png";
 const Map = ({ curCategory }) => {
   const getPinPosition = (curCategory) => {
     switch (curCategory) {
-      case "주차장":
+      case "Parking":
         return {
           x: 30,
           y: 30,
         };
-      case "화장실":
+      case "Toilet":
         return {
           x: 100,
           y: 200,
         };
-      case "편의점":
+      case "Convenience":
         return {
           x: 50,
           y: 30,
         };
-      case "카페1":
+      case "Cafe1":
         return {
           x: 20,
           y: 0,
         };
-      case "카페2":
+      case "Cafe2":
         return {
           x: 170,
           y: 90,
         };
-      case "포토존":
+      case "PhotoZone":
         return {
           x: 170,
           y: 220,
         };
-      case "장미1":
+      case "Rose1":
         return {
           x: 50,
           y: 30,
         };
-      case "장미2":
+      case "Rose2":
         return {
           x: 220,
           y: 220,
         };
-      case "장미3":
+      case "Rose3":
         return {
           x: 10,
           y: 90,
@@ -59,6 +59,8 @@ const Map = ({ curCategory }) => {
 
   return (
     <MapWrapper>
+      <Image src={MapImage} fill alt="map-image" />
+
       <AnimatePresence>
         {curCategory && (
           <PinWrapper
@@ -77,7 +79,7 @@ const Map = ({ curCategory }) => {
               duration: 0.2,
             }}
           >
-            <Image src={PinIcon} alt="Pin-icon" width={56} height={55}></Image>
+            <Image src={PinIcon} alt="Pin-icon" width={56} height={55} />
           </PinWrapper>
         )}
       </AnimatePresence>
