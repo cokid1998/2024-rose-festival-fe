@@ -118,20 +118,6 @@ const SideMenu = ({ language, setLanguage, isMenuOpen, setIsMenuOpen }) => {
                   onClick={handleMenuOpen}
                 >
                   <Image
-                    src={Map}
-                    alt="Map-icon"
-                    style={{ padding: "20px 0" }}
-                  />
-                  <Link href={"/"}>
-                    <MenuTypo>{t("WayToCome")}</MenuTypo>
-                  </Link>
-                </div>
-
-                <div
-                  style={{ display: "flex", alignItems: "center" }}
-                  onClick={handleMenuOpen}
-                >
-                  <Image
                     src={Convenient}
                     alt="Convenient-icon"
                     style={{ padding: "20px 0" }}

@@ -62,7 +62,7 @@ export default function Home() {
         <MapWrapper>
           <MapTitle>
             <Image src={Star} alt="star-icon" />
-            {t("RoseGardenMap")}
+            {t("WayToCome")}
             <Image src={Star} alt="star-icon" />
           </MapTitle>
           <Map />
