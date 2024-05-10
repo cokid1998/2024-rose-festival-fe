@@ -22,15 +22,29 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>조선대학교 2024 장미축제</title>
-        <meta name="description" content="조선대학교 2024 장미축제!🌹" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="조선대학교 2024 장미축제!🌹" />
-        <meta property="og:type" content="article" />
+        <title>조선대학교 2024 장미축제!🌹</title>
+        <meta
+          name="description"
+          content="2024 조선대학교 장미축제 많이 놀러와주세요🎉"
+        />
         <meta property="og:url" content="https://rose-festival.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="조선대학교 2024 장미축제!🌹" />
         <meta
           property="og:description"
+          content="2024 조선대학교 장미축제 많이 놀러와주세요🎉"
+        />
+        <meta property="og:image" content="" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="rose-festival.vercel.app" />
+        <meta
+          property="twitter:url"
+          content="https://rose-festival.vercel.app/"
+        />
+        <meta name="twitter:title" content="조선대학교 2024 장미축제!🌹" />
+        <meta
+          name="twitter:description"
           content="2024 조선대학교 장미축제 많이 놀러와주세요🎉"
         />
       </Head>
