@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const HeaderWrapper = styled("header")`
@@ -10,6 +11,13 @@ export const HeaderWrapper = styled("header")`
   position: fixed;
   z-index: 2;
   top: 0;
+  ${({ isTop, isMenuOpen }) => {
+    if (isTop == 0 && !isMenuOpen) {
+      return css`
+        background-color: white;
+      `;
+    }
+  }}
 `;
 
 export const IconMenuWrapper = styled("div")`
@@ -22,10 +30,21 @@ export const IconMenuWrapper = styled("div")`
 `;
 
 export const HeaderLogo = styled("h1")`
+  width: 248px;
   font-family: "PyeongChangPeace";
-  color: white;
   font-size: 20px;
   text-align: center;
+  ${({ isTop }) => {
+    if (!isTop) {
+      return css`
+        color: black;
+      `;
+    } else {
+      return css`
+        color: white;
+      `;
+    }
+  }};
 `;
 
 export const ChangeLanguageContainer = styled("div")`

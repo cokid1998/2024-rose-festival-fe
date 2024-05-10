@@ -69,10 +69,10 @@ const TheMakers = () => {
             src={NoticeTitleBackgroundImageUrl}
             alt="NoticeBackground"
           />
-          <MakersTitle>만든이들</MakersTitle>
+          <MakersTitle>{t("Makers")}</MakersTitle>
         </MakersTitleWrapper>
         <Desc style={{ textAlign: "center", marginBottom: "30px" }}>
-          조선대학교 멋쟁이 사자처럼 3팀
+          {t("ChosunUnivLikeLion3Team")}
         </Desc>
 
         <Job title={"Developer"} />

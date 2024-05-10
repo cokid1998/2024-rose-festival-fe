@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
         setIsMenuOpen={setIsMenuOpen}
       />
       <Header
+        isMenuOpen={isMenuOpen}
         language={language}
         setLanguage={setLanguage}
         setIsMenuOpen={setIsMenuOpen}
