@@ -11,33 +11,28 @@ const Map = ({ curCategory }) => {
     switch (curCategory) {
       case "Parking":
         return {
-          x: 30,
-          y: 30,
+          x: 3,
+          y: 10,
         };
       case "Toilet":
         return {
-          x: 100,
-          y: 200,
+          x: 215,
+          y: 150,
         };
       case "Convenience":
         return {
-          x: 50,
-          y: 30,
+          x: 215,
+          y: 150,
         };
-      case "Cafe1":
+      case "Cafe":
         return {
-          x: 20,
-          y: 0,
-        };
-      case "Cafe2":
-        return {
-          x: 170,
-          y: 90,
+          x: 215,
+          y: 150,
         };
       case "PhotoZone":
         return {
-          x: 170,
-          y: 220,
+          x: 275,
+          y: 230,
         };
       case "Rose1":
         return {

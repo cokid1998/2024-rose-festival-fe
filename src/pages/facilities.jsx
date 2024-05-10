@@ -32,14 +32,14 @@ const Facilities = () => {
   const [curCategory, setCurCategory] = useState("");
   const facilitiesInfo = [
     {
-      title: "Parking",
-      onIcon: ParkingOn,
-      offIcon: ParkingOff,
-    },
-    {
       title: "Toilet",
       onIcon: ToiletOn,
       offIcon: ToiletOff,
+    },
+    {
+      title: "Parking",
+      onIcon: ParkingOn,
+      offIcon: ParkingOff,
     },
     {
       title: "Convenience",
@@ -47,19 +47,14 @@ const Facilities = () => {
       offIcon: StoreOff,
     },
     {
-      title: "Cafe1",
-      onIcon: CafeOn,
-      offIcon: CafeOff,
-    },
-    {
-      title: "Cafe2",
-      onIcon: CafeOn,
-      offIcon: CafeOff,
-    },
-    {
       title: "PhotoZone",
       onIcon: CameraOn,
       offIcon: CameraOff,
+    },
+    {
+      title: "Cafe",
+      onIcon: CafeOn,
+      offIcon: CafeOff,
     },
     {
       title: "Rose1",
