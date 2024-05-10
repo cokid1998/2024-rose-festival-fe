@@ -26,6 +26,13 @@ export default function Home() {
         <meta name="description" content="조선대학교 2024 장미축제!🌹" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="조선대학교 2024 장미축제!🌹" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://rose-festival.vercel.app/" />
+        <meta
+          property="og:description"
+          content="2024 조선대학교 장미축제 많이 놀러와주세요🎉"
+        />
       </Head>
 
       <BackgroundImageWrapper>
