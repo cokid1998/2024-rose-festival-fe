@@ -103,7 +103,7 @@ const TheMakers = () => {
           <JobCard item={productInfo} />
         </CardContainer>
 
-        <Job title={"Product Manager"} />
+        <Job title={"Designer"} />
         <CardContainer style={{ marginTop: "26px" }}>
           <JobCard item={designInfo} />
         </CardContainer>

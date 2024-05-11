@@ -6,6 +6,7 @@ export const BackgroundImageWrapper = styled("div")`
   max-width: 375px;
   height: 100%;
   position: relative;
+  display: flex;
 `;
 export const TypoWrapper = styled("div")`
   width: 190px;
@@ -39,8 +40,7 @@ export const ImageSize = styled(Image)`
   height: auto;
 `;
 export const MapWrapper = styled("div")`
-  width: 343px;
-  height: 290px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

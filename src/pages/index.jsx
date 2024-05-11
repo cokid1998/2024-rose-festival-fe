@@ -15,6 +15,8 @@ import {
 import BackgroundImageUrl from "@public/images/index/index-background.png";
 import Star from "@public/svg/Star.svg";
 import Image from "next/image";
+import WayToCome from "@public/images/index/way-to-come.png";
+import { MapWrapper as WayToComeMapWrapper } from "@src/components/Facilities/Facilities.styled";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -65,7 +67,17 @@ export default function Home() {
             {t("WayToCome")}
             <Image src={Star} alt="star-icon" />
           </MapTitle>
-          <Map />
+          <div
+            style={{
+              width: "100%",
+              minHeight: "200px",
+              position: "relative",
+              borderRadius: "15px",
+              overflow: "hidden",
+            }}
+          >
+            <Image src={WayToCome} fill alt="way-to-come-image" />
+          </div>
         </MapWrapper>
       </BackgroundImageWrapper>
     </>
