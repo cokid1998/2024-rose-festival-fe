@@ -16,7 +16,6 @@ import BackgroundImageUrl from "@public/images/index/index-background.png";
 import Star from "@public/svg/Star.svg";
 import Image from "next/image";
 import WayToCome from "@public/images/index/way-to-come.png";
-import { MapWrapper as WayToComeMapWrapper } from "@src/components/Facilities/Facilities.styled";
 
 export default function Home() {
   const { t } = useTranslation();

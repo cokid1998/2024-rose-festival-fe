@@ -4,6 +4,7 @@ import {
   Name,
   Info,
 } from "@src/components/TheMakers/JobCard.styled";
+import Image from "next/image";
 
 const JobCard = ({ item }) => {
   return (
@@ -14,8 +15,11 @@ const JobCard = ({ item }) => {
           height: "106px",
           backgroundColor: "#d9d9d9",
           borderRadius: "50%",
+          position: "relative",
         }}
-      ></div>
+      >
+        <Image src={item.url} alt={item.url} fill />
+      </div>
       <TypoWrapper>
         <Name>{item.name}</Name>
         <Info>{item.info}</Info>

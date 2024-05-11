@@ -15,15 +15,25 @@ import Job from "@src/components/TheMakers/Job";
 import NoticeTitleBackgroundImageUrl from "@public/images/notice/NoticeTitleBackground.png";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import JobCard from "@src/components/TheMakers/JobCard";
+import chaehwanImage from "@public/images/makers/chaehwan.jpeg";
+import gaheunImage from "@public/images/makers/gaheun.jpeg";
+import jiyoungImage from "@public/images/makers/jiyoung.jpeg";
+import jongbinImage from "@public/images/makers/jongbin.jpeg";
+import minseoImage from "@public/images/makers/minseo.jpeg";
+import taegwanImage from "@public/images/makers/taegwan.jpeg";
+import ujungImage from "@public/images/makers/ujung.jpeg";
+import hanbiImage from "@public/images/makers/hanbi.jpeg";
 
 const frontInfo = [
   {
     name: "이태관",
     info: "경영학부 17",
+    url: taegwanImage,
   },
   {
     name: "채유정",
     info: "컴퓨터공학과 21",
+    url: ujungImage,
   },
 ];
 
@@ -31,28 +41,34 @@ const backInfo = [
   {
     name: "최종빈",
     info: "컴퓨터공학과 19",
+    url: jongbinImage,
   },
   {
     name: "송민서",
     info: "컴퓨터공학과 20",
+    url: minseoImage,
   },
   {
     name: "임채환",
     info: "컴퓨터공학과 19",
+    url: chaehwanImage,
   },
   {
     name: "김가흔",
     info: "정보보안과 22",
+    url: gaheunImage,
   },
 ];
 
 const productInfo = {
   name: "문지영",
   info: "컴퓨터공학과 20",
+  url: jiyoungImage,
 };
 const designInfo = {
   name: "김한비",
   info: "시각디자인학과 22",
+  url: hanbiImage,
 };
 
 const TheMakers = () => {
