@@ -8,7 +8,7 @@ const GuestBook = ({ item }) => {
   return (
     <GuestBookWrapper>
       <NickName>{item.nickName}</NickName>
-      <TextBox>{item.text}</TextBox>
+      <TextBox>{item.content}</TextBox>
     </GuestBookWrapper>
   );
 };

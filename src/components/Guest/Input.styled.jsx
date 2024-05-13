@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 export const InputContiainer = styled(motion.div)`
   width: 100vw;
   height: 470px;
-  border-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
   background-color: white;
   position: absolute;
   bottom: -320px;

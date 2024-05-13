@@ -12,43 +12,18 @@ import GuestBook from "@src/components/Guest/GuestBook";
 import Input from "@src/components/Guest/Input";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Guest = () => {
   const { t } = useTranslation();
-  const DummyData = [
-    {
-      nickName: "asdf",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam totam laboriosam placeat, mollitia consequatur corporis impedit recusandae adipisci atque.1",
-    },
-    {
-      nickName: "asdf",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam totam laboriosam placeat, mollitia consequatur corporis impedit recusandae adipisci atque.2",
-    },
-    {
-      nickName: "asdf",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam totam laboriosam placeat, mollitia consequatur corporis impedit recusandae adipisci atque.3",
-    },
-    {
-      nickName: "asdf",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam totam laboriosam placeat, mollitia consequatur corporis impedit recusandae adipisci atque.4",
-    },
-    {
-      nickName: "asdf",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam totam laboriosam placeat, mollitia consequatur corporis impedit recusandae adipisci atque.5",
-    },
-    {
-      nickName: "asdf",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam totam laboriosam placeat, mollitia consequatur corporis impedit recusandae adipisci atque.6",
-    },
-    {
-      nickName: "asdf",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam totam laboriosam placeat, mollitia consequatur corporis impedit recusandae adipisci atque.7",
-    },
-    {
-      nickName: "asdf",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam totam laboriosam placeat, mollitia consequatur corporis impedit recusandae adipisci atque.8",
-    },
-  ];
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`${process.env.NEXT_PUBLIC_API_URL}/api/guestbook/`)
+      .then((res) => setList(res.data));
+  }, []);
+
   return (
     <GuestContinaer>
       <GuestBackImageWrapper>
@@ -61,8 +36,8 @@ const Guest = () => {
           </GuestTypoWrapper>
 
           <GuestBookWrapper>
-            {DummyData.map((item) => (
-              <GuestBook key={item.text} item={item} />
+            {list.map((item) => (
+              <GuestBook key={item.guestBookId} item={item} />
             ))}
           </GuestBookWrapper>
         </GuestContenetWrapper>
