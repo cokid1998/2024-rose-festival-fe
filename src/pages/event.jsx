@@ -1,83 +1,137 @@
 import Image from "next/image";
-import Union from "@public/images/facilities/Union.png";
+import GuestBackImageUrl from "@public/images/guest/guest-back-image.png";
 import {
-  Container,
-  FacilitiesBackgroundImageWrapper,
-  ContenetPositionWrapper,
   FacilitiesWrapper,
   FacilitiesGuideTypoWrapper,
   FacilitiesChoiceBox,
 } from "@src/components/Facilities/Facilities.styled";
-import { EventWrapper } from "@src/components/Event/event.styled";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import FacilitiesContent from "@src/components/Facilities/FacilitiesContent";
 import Star from "@public/svg/Star.svg";
-import ParkingOn from "@public/svg/facilities/OnIcon/ParkingOn.svg";
-import ToiletOn from "@public/svg/facilities/OnIcon/ToiletOn.svg";
-import StoreOn from "@public/svg/facilities/OnIcon/StoreOn.svg";
-import CafeOn from "@public/svg/facilities/OnIcon/CafeOn.svg";
-import CameraOn from "@public/svg/facilities/OnIcon/CameraOn.svg";
-import RoseOn from "@public/svg/facilities/OnIcon/RoseOn.svg";
-import ParkingOff from "@public/svg/facilities/OffIcon/ParkingOff.svg";
-import ToiletOff from "@public/svg/facilities/OffIcon/ToiletOff.svg";
-import StoreOff from "@public/svg/facilities/OffIcon/StoreOff.svg";
-import CafeOff from "@public/svg/facilities/OffIcon/CafeOff.svg";
-import CameraOff from "@public/svg/facilities/OffIcon/CameraOff.svg";
-import RoseOff from "@public/svg/facilities/OffIcon/RoseOff.svg";
+import car from "@public/svg/event/car.svg";
+import artShow from "@public/svg/event/art-show.svg";
+import art from "@public/svg/event/art.svg";
+import bohyungArt from "@public/svg/event/bohyung-art.svg";
+import campain from "@public/svg/event/campain.svg";
+import dabang from "@public/svg/event/dabang.svg";
+import museum from "@public/svg/event/museum.svg";
+import photoZone from "@public/svg/event/photo-zone.svg";
+import shadowPhoto from "@public/svg/event/shadow-photo.svg";
+import sing from "@public/svg/event/sing.svg";
+import snsEvent from "@public/svg/event/sns-event.svg";
+import wish from "@public/svg/event/wish.svg";
+import dojagi from "@public/svg/event/dojagi.svg";
+import EventContent from "@src/components/Event/EventContent";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
+import EventImage from "@public/images/event/event-plan.png";
+import {
+  EventWrapper,
+  EventContainer,
+  EventBackImageWrapper,
+} from "@src/components/Event/event.styled";
+import Modal from "@src/components/Base/Modal/Moda";
 
 const Event = () => {
   const { t } = useTranslation();
-  const [curCategory, setCurCategory] = useState("");
-  const facilitiesInfo = [
+  const [curEvent, setCurEvent] = useState("");
+  const [isModal, setIsModal] = useState(false);
+  const handleModal = () => {
+    setIsModal((prev) => !prev);
+  };
+
+  const eventInfo = [
     {
-      title: "Toilet",
-      onIcon: ToiletOn,
-      offIcon: ToiletOff,
+      title: "Event1Title",
+      icon: car,
+      date: "Event1Time",
+      place: "Event1Place",
     },
     {
-      title: "Parking",
-      onIcon: ParkingOn,
-      offIcon: ParkingOff,
+      title: "Event2Title",
+      icon: art,
+      date: "Event2Time",
+      place: "Event2Place",
     },
     {
-      title: "Convenience",
-      onIcon: StoreOn,
-      offIcon: StoreOff,
+      title: "Event4Title",
+      icon: photoZone,
+      date: "Event4Time",
+      place: "Event4Place",
     },
     {
-      title: "PhotoZone",
-      onIcon: CameraOn,
-      offIcon: CameraOff,
+      title: "Event5Title",
+      icon: dojagi,
+      date: "Event5Time",
+      place: "Event5Place",
     },
     {
-      title: "Cafe",
-      onIcon: CafeOn,
-      offIcon: CafeOff,
+      title: "Event6Title",
+      icon: artShow,
+      date: "Event6Time",
+      place: "Event6Place",
     },
     {
-      title: "Rose1",
-      onIcon: RoseOn,
-      offIcon: RoseOff,
+      title: "Event7Title",
+      icon: campain,
+      date: "Event7Time",
+      place: "Event7Place",
     },
     {
-      title: "Rose2",
-      onIcon: RoseOn,
-      offIcon: RoseOff,
+      title: "Event8Title",
+      icon: museum,
+      date: "Event8Time",
+      place: "Event8Place",
     },
     {
-      title: "Rose3",
-      onIcon: RoseOn,
-      offIcon: RoseOff,
+      title: "Event9Title",
+      icon: wish,
+      date: "Event9Time",
+      place: "Event9Place",
+    },
+    {
+      title: "Event10Title",
+      icon: shadowPhoto,
+      date: "Event10Time",
+      place: "Event10Place",
+    },
+    {
+      title: "Event11Title",
+      icon: sing,
+      date: "Event11Time",
+      place: "Event11Place",
+    },
+    {
+      title: "Event12Title",
+      icon: dabang,
+      date: "Event12Time",
+      place: "Event12Place",
+    },
+    {
+      title: "Event13Title",
+      icon: bohyungArt,
+      date: "Event13Time",
+      place: "Event13Place",
+    },
+    {
+      title: "Event14Title",
+      icon: snsEvent,
+      date: "Event14Time",
+      place: "Event14Place",
     },
   ];
 
   return (
-    <Container>
-      <FacilitiesBackgroundImageWrapper>
-        <Image src={Union} alt="facilities-background" fill />
-      </FacilitiesBackgroundImageWrapper>
+    <EventContainer>
+      <Modal curEvent={curEvent} handleModal={handleModal} isModal={isModal} />
+
+      <EventBackImageWrapper>
+        <Image
+          priority
+          src={GuestBackImageUrl}
+          alt="facilities-background"
+          fill
+        />
+      </EventBackImageWrapper>
 
       <EventWrapper>
         <FacilitiesWrapper>
@@ -86,21 +140,40 @@ const Event = () => {
             {t("Event")}
             <Image src={Star} alt="star-icon" />
           </FacilitiesGuideTypoWrapper>
-          <FacilitiesChoiceBox>
-            {facilitiesInfo.map((item) => {
+          <div
+            style={{
+              width: "350px",
+              height: "350px",
+              position: "relative",
+              left: "50%",
+              transform: "translateX(-50%)",
+              marginBottom: "30px",
+              borderRadius: "15px",
+              overflow: "hidden",
+            }}
+          >
+            <Image src={EventImage} alt="image-plan" fill />
+          </div>
+          <FacilitiesChoiceBox
+            style={{
+              rowGap: "18px",
+            }}
+          >
+            {eventInfo.map((item) => {
               return (
-                <FacilitiesContent
+                <EventContent
                   key={item.title}
                   item={item}
-                  curCategory={curCategory}
-                  setCurCategory={setCurCategory}
+                  curEvent={curEvent}
+                  setCurEvent={setCurEvent}
+                  handleModal={handleModal}
                 />
               );
             })}
           </FacilitiesChoiceBox>
         </FacilitiesWrapper>
       </EventWrapper>
-    </Container>
+    </EventContainer>
   );
 };
 

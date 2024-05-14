@@ -34,5 +34,60 @@
   "Create": "Create",
   "Complete": "Complete",
   "ChosunUnivLikeLion3Team": "ChosunUniv Like Lion 3Team",
-  "Event": "Event Schedule"
+  "Event": "Event Schedule",
+  "EventModal": "Event Title",
+  "EventModalTime": "Event Time",
+  "EventModalPlace": "Event Place",
+
+  "Event1Title": "Landrover exhibition",
+  "Event1Time": "17~19(Fri ~ Sun) 10:00 ~ 17:00",
+  "Event1Place": "Rose Garden",
+
+  "Event2Title": "Korean Painting and Western Painting Exhibition",
+  "Event2Time": "16~20(Thu ~ Mon) 10:00 ~ 17:00",
+  "Event2Place": "Rose Garden",
+
+  "Event4Title": "Main photo zone",
+  "Event4Time": "16~20(Thu ~ Mon) 09:00 ~ 21:00",
+  "Event4Place": "Rose Garden",
+
+  "Event5Title": "Ceramic exhibition",
+  "Event5Time": "16~20(Thu ~ Mon) 10:00 ~ 17:00",
+  "Event5Place": "Rose Garden",
+
+  "Event6Title": "Art gallery exhibition",
+  "Event6Time": "16,17,20(Thu,Fri,Mon) 09:00 ~ 17:00 / 18,19(Sat,Sun) 09:00 ~ 21:00",
+  "Event6Place": "Art College",
+
+  "Event7Title": "Campaign & Publicity",
+  "Event7Time": "16~20(Thu ~ Mon) 09:00 ~ 21:00",
+  "Event7Place": "Rose Garden",
+
+  "Event8Title": "Museum (Seoseok Hall)",
+  "Event8Time": "16,17,20(Thu,Fri,Mon) 09:00 ~ 17:00 / 18,19(Sat,Sun) 09:00 ~ 21:00",
+  "Event8Place": "Seoseok Hall",
+
+  "Event9Title": "Wish yard",
+  "Event9Time": "16~20(Thu ~ Mon) 09:00 ~ 17:00",
+  "Event9Place": "Rose Garden",
+
+  "Event10Title": "Shadow photo zone",
+  "Event10Time": "16~20(Thu ~ Mon) 09:00 ~ 21:00",
+  "Event10Place": "Rose Garden",
+
+  "Event11Title": "Busking and character photo zone",
+  "Event11Time": "Busking - 19(Sun) 12:00 ~ 16:00 / character photo zone 16~20(Thu ~ Mon) 09:00 ~ 21:00",
+  "Event11Place": "Rose Garden",
+
+  "Event12Title": "Rose tea room",
+  "Event12Time": "17(Fri) 14:00 ~ 20:00 / 18~19(Sat ~ Sun) 12:00 ~ 20:00",
+  "Event12Place": "Rose Garden",
+
+  "Event13Title": "Kim Bo-hyun Museum of Art",
+  "Event13Time": "16,17,20(Thu,Fri,Mon) 09:00 ~ 17:00 / 18~19(Sat ~ Sun) 09:00 ~ 21:00",
+  "Event13Place": "Main building",
+
+  "Event14Title": "SNS event",
+  "Event14Time": "18~19(Sat ~ Sun) 09:00 ~ 17:00",
+  "Event14Place": ""
 }

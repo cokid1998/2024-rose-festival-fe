@@ -24,6 +24,7 @@ const NoticeTab = ({ curTab, setCurTab }) => {
   return (
     <NoticeTabWrapper curTab={curTab}>
       <Image
+        priority
         src={NoticeTabBackgroundImageUrl}
         alt="NoticeTab"
         fill

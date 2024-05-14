@@ -51,7 +51,7 @@ export default function Home() {
       </Head>
 
       <BackgroundImageWrapper>
-        <ImageSize src={BackgroundImageUrl} alt="index-background" />
+        <ImageSize priority src={BackgroundImageUrl} alt="index-background" />
         <TypoWrapper>
           <TitleWrapper>{t("Title")}</TitleWrapper>
           <PeriodWrapper>

@@ -19,6 +19,7 @@ import Main from "@public/svg/Main.svg";
 import Convenient from "@public/svg/Convenient.svg";
 import Map from "@public/svg/Map.svg";
 import Register from "@public/svg/Register.svg";
+import Event from "@public/svg/Event.svg";
 import Sound from "@public/svg/Sound.svg";
 import Heart from "@public/svg/Heart.svg";
 import ChangeLanguage from "@src/components/Base/Header/ChangeLanguage";
@@ -118,6 +119,20 @@ const SideMenu = ({ language, setLanguage, isMenuOpen, setIsMenuOpen }) => {
                   onClick={handleMenuOpen}
                 >
                   <Image
+                    src={Event}
+                    alt="Convenient-icon"
+                    style={{ padding: "20px 0" }}
+                  />
+                  <Link href={"/event"}>
+                    <MenuTypo>{t("Event")}</MenuTypo>
+                  </Link>
+                </div>
+
+                <div
+                  style={{ display: "flex", alignItems: "center" }}
+                  onClick={handleMenuOpen}
+                >
+                  <Image
                     src={Convenient}
                     alt="Convenient-icon"
                     style={{ padding: "20px 0" }}
@@ -127,7 +142,7 @@ const SideMenu = ({ language, setLanguage, isMenuOpen, setIsMenuOpen }) => {
                   </Link>
                 </div>
 
-                <div
+                {/* <div
                   style={{ display: "flex", alignItems: "center" }}
                   onClick={handleMenuOpen}
                 >
@@ -139,7 +154,7 @@ const SideMenu = ({ language, setLanguage, isMenuOpen, setIsMenuOpen }) => {
                   <Link href={"/guest"}>
                     <MenuTypo>{t("Guest")}</MenuTypo>
                   </Link>
-                </div>
+                </div> */}
 
                 <div
                   style={{ display: "flex", alignItems: "center" }}

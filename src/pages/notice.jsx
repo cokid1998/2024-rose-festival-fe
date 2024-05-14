@@ -14,7 +14,12 @@ const Notice = () => {
 
   return (
     <NoticeWrapper>
-      <Image src={NoticeBackgroundImageUrl} alt="Notice-background" fill />
+      <Image
+        priority
+        src={NoticeBackgroundImageUrl}
+        alt="Notice-background"
+        fill
+      />
       <BoxWrapper>
         <TodayRoseTab curTab={curTab} setCurTab={setCurTab} />
         <NoticeTab curTab={curTab} setCurTab={setCurTab} />

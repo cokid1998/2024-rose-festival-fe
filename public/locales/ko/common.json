@@ -34,5 +34,60 @@
   "Create": "작성하기",
   "Complete": "완료",
   "ChosunUnivLikeLion3Team": "조선대학교 멋쟁이 사자처럼 3팀",
-  "Event": "이벤트 일정"
+  "Event": "이벤트 일정",
+  "EventModal": "이벤트",
+  "EventModalTime": "일시",
+  "EventModalPlace": "장소",
+
+  "Event1Title": "랜드로버전시회",
+  "Event1Time": "17~19(금 ~ 일) 10:00 ~ 17:00",
+  "Event1Place": "장미원",
+
+  "Event2Title": "한국화 서양화 전시회",
+  "Event2Time": "16~20(목 ~ 월) 10:00 ~ 17:00",
+  "Event2Place": "장미원",
+
+  "Event4Title": "메인 포토존",
+  "Event4Time": "16~20(목 ~ 월) 09:00 ~ 21:00",
+  "Event4Place": "장미원",
+
+  "Event5Title": "도자전시회",
+  "Event5Time": "16~20(목 ~ 월) 10:00 ~ 17:00",
+  "Event5Place": "장미원",
+
+  "Event6Title": "미술관전시회",
+  "Event6Time": "16,17,20(목,금,월) 09:00 ~ 17:00 / 18,19(토,일) 09:00 ~ 21:00",
+  "Event6Place": "미술대학",
+
+  "Event7Title": "캠페인 & 홍보",
+  "Event7Time": "16~20(목 ~ 월) 09:00 ~ 21:00",
+  "Event7Place": "장미원",
+
+  "Event8Title": "박물관(서석홀)",
+  "Event8Time": "16,17,20(목,금,월) 09:00 ~ 17:00 / 18,19(토,일) 09:00 ~ 21:00",
+  "Event8Place": "서석홀",
+
+  "Event9Title": "소원마당",
+  "Event9Time": "16~20(목 ~ 월) 09:00 ~ 17:00",
+  "Event9Place": "장미원",
+
+  "Event10Title": "그림자 포토존",
+  "Event10Time": "16~20(목 ~ 월) 09:00 ~ 21:00",
+  "Event10Place": "장미원",
+
+  "Event11Title": "버스킹 & 캐릭터포토존",
+  "Event11Time": "버스킹 - 19(일) 12:00 ~ 16:00 / 캐릭터포토존 - 16~20(목 ~ 월) 09:00 ~ 21:00",
+  "Event11Place": "장미원",
+
+  "Event12Title": "장미다방",
+  "Event12Time": "17(금) 14:00 ~ 20:00 / 18~19(토 ~ 일) 12:00 ~ 20:00",
+  "Event12Place": "장미원",
+
+  "Event13Title": "김보현 미술관",
+  "Event13Time": "16,17,20(목,금,월) 09:00 ~ 17:00 / 18~19(토 ~ 일) 09:00 ~ 21:00",
+  "Event13Place": "본관",
+
+  "Event14Title": "SNS 이벤트",
+  "Event14Time": "18~19(토 ~ 일) 09:00 ~ 17:00",
+  "Event14Place": ""
 }

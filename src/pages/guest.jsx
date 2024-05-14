@@ -27,7 +27,7 @@ const Guest = () => {
   return (
     <GuestContinaer>
       <GuestBackImageWrapper>
-        <Image src={GuestBackImageUrl} fill alt="guest-back-image" />
+        <Image priority src={GuestBackImageUrl} fill alt="guest-back-image" />
         <GuestContenetWrapper>
           <GuestTypoWrapper>
             <Image src={Star} alt="star-icon" />

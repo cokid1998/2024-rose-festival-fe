@@ -76,7 +76,12 @@ const TheMakers = () => {
   return (
     <MakersContainer>
       <div style={{ width: "100vw", height: "2400px" }}>
-        <Image src={MakersBackgroundImageUrl} alt="TheMakers-background" fill />
+        <Image
+          priority
+          src={MakersBackgroundImageUrl}
+          alt="TheMakers-background"
+          fill
+        />
       </div>
 
       <MakersWrapper>

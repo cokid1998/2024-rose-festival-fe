@@ -24,6 +24,7 @@ const TodayRoseTab = ({ curTab, setCurTab }) => {
   return (
     <TodayRoseTabWrapper curTab={curTab}>
       <Image
+        priority
         src={TodayRoseTabBackgroundImageUrl}
         alt="TodayRoseTab"
         fill

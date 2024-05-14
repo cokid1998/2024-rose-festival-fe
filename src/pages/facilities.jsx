@@ -76,15 +76,15 @@ const Facilities = () => {
   return (
     <Container>
       <FacilitiesBackgroundImageWrapper>
-        <Image src={Union} alt="facilities-background" fill />
+        <Image priority src={Union} alt="facilities-background" fill />
       </FacilitiesBackgroundImageWrapper>
 
       <ContenetPositionWrapper>
         <FacilitiesWrapper>
           <FacilitiesGuideTypoWrapper>
-            <Image src={Star} alt="star-icon" />
+            <Image priority src={Star} alt="star-icon" />
             {t("FacilitiesInfoTitle")}
-            <Image src={Star} alt="star-icon" />
+            <Image priority src={Star} alt="star-icon" />
           </FacilitiesGuideTypoWrapper>
           <Map curCategory={curCategory} />
           <FacilitiesChoiceBox>
