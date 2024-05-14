@@ -93,12 +93,6 @@ export const ImageWrapper = styled("div")`
   width: 290px;
   height: 240px;
   position: relative;
-  ${({ tailDirection }) => {
-    return css`
-      left: ${tailDirection ? "" : "10px"};
-      right: ${tailDirection ? "10px" : ""};
-    `;
-  }}
 `;
 export const RoseWrapper = styled("div")`
   width: 200px;

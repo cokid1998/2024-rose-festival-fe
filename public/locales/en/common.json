@@ -89,5 +89,11 @@
 
   "Event14Title": "SNS event",
   "Event14Time": "18~19(Sat ~ Sun) 09:00 ~ 17:00",
-  "Event14Place": ""
+  "Event14Place": "",
+
+  "Charleston": "Charleston",
+  "Candlelight": "Candlelight",
+  "Rokoko": "Rokoko",
+  "Matsuri": "Matsuri",
+  "DesertPeace": "Desert Peace"
 }

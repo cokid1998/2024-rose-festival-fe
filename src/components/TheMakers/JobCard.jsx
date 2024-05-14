@@ -13,12 +13,11 @@ const JobCard = ({ item }) => {
         style={{
           width: "106px",
           height: "106px",
-          backgroundColor: "#d9d9d9",
           borderRadius: "50%",
           position: "relative",
         }}
       >
-        <Image src={item.url} alt={item.url} fill />
+        <Image src={item.url} alt={item.name} fill />
       </div>
       <TypoWrapper>
         <Name>{item.name}</Name>

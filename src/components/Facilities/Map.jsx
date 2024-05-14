@@ -6,6 +6,8 @@ import Image from "next/image";
 import PinIcon from "@public/images/facilities/Pin.png";
 import { AnimatePresence } from "framer-motion";
 import MapImage from "@public/images/facilities/Map.png";
+import rococoPin from "@public/images/facilities/rococo.jpeg";
+
 const Map = ({ curCategory }) => {
   const getPinPosition = (curCategory) => {
     switch (curCategory) {
@@ -36,18 +38,18 @@ const Map = ({ curCategory }) => {
         };
       case "Rose1":
         return {
-          x: 50,
-          y: 30,
+          x: 265,
+          y: 230,
         };
       case "Rose2":
         return {
-          x: 220,
-          y: 220,
+          x: 269,
+          y: 230,
         };
       case "Rose3":
         return {
-          x: 10,
-          y: 90,
+          x: 325,
+          y: 240,
         };
     }
   };
@@ -58,24 +60,26 @@ const Map = ({ curCategory }) => {
 
       <AnimatePresence>
         {curCategory && (
-          <PinWrapper
-            initial={{
-              x: 150,
-              y: 150,
-              opacity: 0,
-            }}
-            animate={{
-              x: getPinPosition(curCategory).x,
-              y: getPinPosition(curCategory).y,
-              opacity: 1,
-            }}
-            exit={{ opacity: 0 }}
-            transition={{
-              duration: 0.2,
-            }}
-          >
-            <Image src={PinIcon} alt="Pin-icon" width={56} height={55} />
-          </PinWrapper>
+          <>
+            <PinWrapper
+              initial={{
+                x: 150,
+                y: 150,
+                opacity: 0,
+              }}
+              animate={{
+                x: getPinPosition(curCategory).x,
+                y: getPinPosition(curCategory).y,
+                opacity: 1,
+              }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.2,
+              }}
+            >
+              <Image src={PinIcon} alt="Pin-icon" width={56} height={55} />
+            </PinWrapper>
+          </>
         )}
       </AnimatePresence>
     </MapWrapper>

@@ -1,5 +1,3 @@
-import RightTail from "@public/images/notice/RightTailRoseThumbnail.png";
-import LeftTail from "@public/images/notice/LeftTailRoseThumbnail.png";
 import FirstRoseIcon from "@public/images/notice/RoseIcon/FirstRose.png";
 import SecondRoseIcon from "@public/images/notice/RoseIcon/SecondRose.png";
 import ThirdRoseIcon from "@public/images/notice/RoseIcon/ThirdRose.png";
@@ -13,11 +11,18 @@ import {
   RoseTitle,
   RoseIconWrapper,
 } from "@src/components/Notice/notice.styled";
+import Rose1 from "@public/images/notice/RoseImage/Rose1.png";
+import Rose2 from "@public/images/notice/RoseImage/Rose2.png";
+import Rose3 from "@public/images/notice/RoseImage/Rose3.png";
+import Rose4 from "@public/images/notice/RoseImage/Rose4.png";
+import Rose5 from "@public/images/notice/RoseImage/Rose5.png";
+import { useTranslation } from "next-i18next";
 
 const roseItemInfo = [
   {
-    roseTitle: "장미이름0",
+    roseTitle: "Charleston",
     imageUrl: FirstRoseIcon,
+    roseImageUrl: Rose1,
     iconPositionInfo: {
       width: "42px",
       height: "28px",
@@ -26,8 +31,9 @@ const roseItemInfo = [
     },
   },
   {
-    roseTitle: "장미이름1",
+    roseTitle: "Candlelight",
     imageUrl: SecondRoseIcon,
+    roseImageUrl: Rose2,
     iconPositionInfo: {
       width: "42px",
       height: "28px",
@@ -36,8 +42,9 @@ const roseItemInfo = [
     },
   },
   {
-    roseTitle: "장미이름2",
+    roseTitle: "Rokoko",
     imageUrl: ThirdRoseIcon,
+    roseImageUrl: Rose3,
     iconPositionInfo: {
       width: "55px",
       height: "47px",
@@ -46,8 +53,9 @@ const roseItemInfo = [
     },
   },
   {
-    roseTitle: "장미이름3",
+    roseTitle: "Matsuri",
     imageUrl: FourthRoseIcon,
+    roseImageUrl: Rose4,
     iconPositionInfo: {
       width: "43px",
       height: "40px",
@@ -58,16 +66,18 @@ const roseItemInfo = [
 ];
 
 const IntroRoseContent = () => {
+  const { t } = useTranslation();
+
   return (
     <RoseContentWrapper>
-      {roseItemInfo.map((item, idx) => {
+      {roseItemInfo.map((item) => {
         return (
           <RoseThumbWrapper key={item.roseTitle}>
-            <ImageWrapper tailDirection={idx % 2}>
+            <ImageWrapper>
               <Image
-                src={idx % 2 === 0 ? RightTail : LeftTail}
-                width={290}
-                height={240}
+                src={item.roseImageUrl}
+                width={280}
+                height={250}
                 alt="Rose-image"
               />
             </ImageWrapper>
@@ -82,31 +92,26 @@ const IntroRoseContent = () => {
               >
                 <Image src={item.imageUrl} fill alt="roseIcon" />
               </RoseIconWrapper>
-              <RoseTitle>{item.roseTitle}</RoseTitle>
+              <RoseTitle>{t(item.roseTitle)}</RoseTitle>
             </RoseWrapper>
           </RoseThumbWrapper>
         );
       })}
       <RoseThumbWrapper>
-        <ImageWrapper tailDirection={0}>
-          <Image src={RightTail} width={290} height={240} alt="Rose-image" />
+        <ImageWrapper>
+          <Image src={Rose5} width={280} height={250} alt="Rose-image" />
         </ImageWrapper>
         <RoseWrapper>
           <RoseIconWrapper
             width="40px"
-            height={"30px"}
-            bottom={"-10px"}
-            left={"-10px"}
+            height="30px"
+            bottom="-10px"
+            left="-10px"
           >
             <Image src={SecondRoseIcon} fill alt="roseIcon" />
           </RoseIconWrapper>
-          <RoseTitle>장미이름4</RoseTitle>
-          <RoseIconWrapper
-            width="45px"
-            height={"30px"}
-            top={"-10px"}
-            right={"-10px"}
-          >
+          <RoseTitle>{t("DesertPeace")}</RoseTitle>
+          <RoseIconWrapper width="45px" height="30px" top="-10px" right="-10px">
             <Image src={FirstRoseIcon} fill alt="roseIcon" />
           </RoseIconWrapper>
         </RoseWrapper>
