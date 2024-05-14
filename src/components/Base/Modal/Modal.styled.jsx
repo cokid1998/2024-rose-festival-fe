@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const ModalWrapper = styled(motion.div)`
   width: 100lvw;
-  height: 100%;
+  height: 100lvh;
   position: fixed;
   left: 0;
   top: 0;
