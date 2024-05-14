@@ -47,15 +47,16 @@ const Modal = ({ curEvent, handleModal, isModal }) => {
             />
             <TypoWrapper>
               <LabelWrapper>
-                <Tag>{t("EventModal")} : </Tag>
+                <Tag>{t("EventModal")}</Tag>&nbsp;:&nbsp;
                 <Body>{t(curEvent.title)}</Body>
               </LabelWrapper>
               <LabelWrapper>
-                <Tag>{t("EventModalTime")} : </Tag>
+                <Tag>{t("EventModalTime")}</Tag>&nbsp;:&nbsp;
                 <Body>{t(curEvent.date)}</Body>
               </LabelWrapper>
               <LabelWrapper>
-                {t("EventModalPlace")} : {t(curEvent.place)}
+                <Tag>{t("EventModalPlace")}</Tag>&nbsp;:&nbsp;
+                {t(curEvent.place)}
               </LabelWrapper>
             </TypoWrapper>
           </ModalBox>
