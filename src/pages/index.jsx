@@ -53,7 +53,8 @@ export default function Home() {
       <BackgroundImageWrapper>
         <ImageSize priority src={BackgroundImageUrl} alt="index-background" />
         <TypoWrapper>
-          <TitleWrapper>{t("Title")}</TitleWrapper>
+          <TitleWrapper>{t("Chosun")}</TitleWrapper>
+          <TitleWrapper>{t("Festival")}</TitleWrapper>
           <PeriodWrapper>
             <Period>{t("Date1")}</Period>
             <Period>⸺</Period>
