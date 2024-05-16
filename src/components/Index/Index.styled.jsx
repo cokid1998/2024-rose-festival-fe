@@ -23,7 +23,6 @@ export const TitleWrapper = styled("h1")`
   font-size: 50px;
   color: white;
   line-height: 140%;
-  text-wrap: balance;
 `;
 export const PeriodWrapper = styled("div")`
   display: flex;
